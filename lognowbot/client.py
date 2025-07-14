@@ -51,7 +51,7 @@ class LogNowBotClient:
 
         try:
             response = self.session.post(
-                f"{self.base_url}/v1/notify", json=payload, timeout=30
+                f"{self.base_url}/send/", json=payload, timeout=30
             )
             response.raise_for_status()
 
